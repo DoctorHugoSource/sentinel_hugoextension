@@ -39,12 +39,13 @@ T.Exterior = {
 	Sounds={
 		Teleport={
 			mat="toast/turd/mat.ogg",
+			mat_short = "toast/turd/sentinel_mat_short.ogg",
 			demat_damaged = "toast/turd/dematwarn_ext.ogg",
 			mat_damaged = "toast/turd/matwarn_ext.ogg",
 			demat_damaged_fast = "toast/turd/dematwarn_ext.ogg",
 			mat_damaged_fast = "toast/turd/matwarn_ext.ogg",
-			demat_fast = "toast/turd/demat.ogg",
-			mat_fast = "toast/turd/mat.ogg",
+			demat_fast = "toast/turd/demat_fast.ogg",
+			mat_fast = "toast/turd/mat_fast.ogg",
 			demat="toast/turd/demat.ogg",
 			fullflight="toast/turd/fullflight.ogg",
 			fullflight_damaged="toast/turd/fullflight_warn.ogg",
@@ -94,7 +95,7 @@ T.Exterior = {
 				[1] = 3.5
 			},
 			DematFastSequenceDelays = {
-				[1] = 3.5
+				[1] = 0.5
 			},
 
 			SequenceSpeed = {
@@ -102,6 +103,7 @@ T.Exterior = {
 			 Demat = 1.5,
 			 },
 			PrematDelay = 3.5,
+			PrematDelayShort = 1,
 
 			SequenceSpeedFast = 1.5,
 			PrematSequenceDelayFast = 0.1,
@@ -202,6 +204,7 @@ T.Interior={
 		Teleport={
 			demat_damaged = "toast/turd/dematint_warn.ogg",
 			mat="toast/turd/matint.ogg",
+			mat_short = "toast/turd/sentinel_matint_short.ogg",
 			mat_damaged="toast/turd/matint_warn.ogg",
 			demat_fail = "toast/turd/dematfail.ogg",
 			mat_fail = "toast/turd/matfail.ogg",
@@ -598,7 +601,6 @@ T.Interior={
 		turdisslider2="flight",
 		turdiskeypad="coordinates",
 		turdisminiswitch1="repair",
-		turdisminiswitch2="toggle_console",
 		turdistoyotalever1="physlock",
 		turdisminiswitch7="fastreturn",
 		turdisminiswitch8="cloak",
@@ -619,11 +621,12 @@ T.Interior={
 		turdisminiswitch4		= "mathop",
 		turdisminiswitch6		= "vortexdrift",
 		turdisminiswitch5		= "multiloopstabiliser",
+		turdisminiswitch2		= "hadssensitivity",
 		-- not enough controls on the console for these V
 		-- toyota_levers2		= "hadssensitivity",
 		-- toyota_cranks		= "mathop_shortcut",
-		-- toyota_ducks			= "multiloopstabiliser",
 		-- turdisminiswitch5	= "redecorate",
+		-- turdisminiswitch2	= "toggle_console",
 	},
 	PartTips={
 		turdisdestselect={pos = Vector(23.493, -0.29, 45.506),down = true,text="Manual Destination Select"},
@@ -636,7 +639,6 @@ T.Interior={
 		turdisslider2={pos = Vector(16.035, 28.831, 41.315),left = true,text="Flight"},
 		turdiskeypad={pos = Vector(-9.109, 41.983, 39.869),down = true,text="Coordinates"},
 		turdisminiswitch1={pos = Vector(10.165, -23.586, 46.569),left = true,text="Self-Repair"},
-		turdisminiswitch2={pos = Vector(12.78, -22.121, 46.609),right = true,text="Disable Console"},
 		turdistoyotalever1={pos = Vector(4.972, 34.298, 43.186),right = true,text="Physlock"},
 		turdisminiswitch7={pos = Vector(12.255, -27.298, 44.098),left = true,text="Fast Return"},
 		turdisminiswitch8={pos = Vector(14.86, -25.851, 44),right = true,text="Exterior Cloak"},
@@ -658,11 +660,12 @@ T.Interior={
 		turdisminiswitch10			= {pos = Vector(15.58,-27.02,43.37),			text = "Target manually selected map", right = true,     down = false, },
 		turdisminiswitch4			= {pos = Vector(13.48,-23.35,45.87),			text = "Toggle MatHop", right = true,     down = false, },
 		turdisminiswitch6			= {pos = Vector(14.18,-24.6,45.03),				text = "Toggle Vortex Drift Compensators", right = true,     down = false, },
-		turdisminiswitch5			= {pos = Vector(11.57,-26.09,45.06),				text = "Toggle Multiloop Stabiliser", right = false,     down = false, },
+		turdisminiswitch5			= {pos = Vector(11.57,-26.09,45.06),			text = "Toggle Multiloop Stabiliser", right = false,     down = false, },
+		turdisminiswitch2			= {pos = Vector(12.78, -22.121, 46.609),		text = "Toggle HADS Sensitivity", right = true,	},
 		-- not enough controls on the console for these V
 		-- toyota_lever5				= {pos = Vector(-39.239, -12.951, 135.572),		text = "Box illumination", right = true,     down = false, },
 		-- toyota_cranks				= {pos = Vector(76.89, 148.56, 130.77),			text = "MatHop Quick Access", right = true,     down = false, },
-		-- toyota_levers2				= {pos = Vector(29.86, -3.24, 137.54),			text = "Toggle HADS Sensitivity", right = true,     down = false, },
+		-- toyota_levers2				= {pos = Vector(29.86, -3.24, 137.54),			text = "Disable Console", right = true,     down = false, },
 		-- turdisminiswitch5			= {pos = Vector(11.57,-26.09,45.06),			right = true,text="Change Desktop"},
 
 		},
@@ -797,6 +800,8 @@ T.CustomHooks = {
 			local flight = ext:GetData("flight")
 			local vortex = ext:GetData("vortex")
 			local lowpower = ext:GetData("lowpowermode", false)
+
+			if not IsValid(int) then return end
 
 			if not power and (not lowpower) then
 				int:ApplyTextureSet("poweroff")

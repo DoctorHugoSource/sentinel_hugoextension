@@ -8,7 +8,7 @@ matproxy.Add({
 
     bind = function(self, mat, ent)
         if not IsValid(ent) or not ent.TardisPart then return end
-        if not ent.interior then return end
+        if not IsValid(ent.interior) then return end
 
         local col = ent.interior.metadata.Interior.Colors.texturecolor
 
