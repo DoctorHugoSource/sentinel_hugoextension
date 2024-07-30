@@ -1,0 +1,17 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "vortex/turdis/frontvortex"
+	"$surfaceprop" "water"
+	"$selfillum" 1
+	"$selfillummask" "vortex/turdis/frontvortex"
+	"$nodecal" "1"
+		"Proxies"
+		{
+			"AnimatedTexture"
+				{
+					"animatedTextureVar" "$basetexture"
+					"animatedTextureFrameNumVar" "$frame"
+					"animatedTextureFrameRate" "25"
+				}
+		}
+}

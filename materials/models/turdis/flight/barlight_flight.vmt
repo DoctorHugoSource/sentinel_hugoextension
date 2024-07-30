@@ -1,0 +1,18 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/turdis/flight/barlight_flight"
+	"$surfaceprop" "glass"
+	"$selfillum" 1
+     "$selfillummask" "models/turdis/barlight"
+	"$nodecal" "1"
+		"Proxies"
+		{
+			"AnimatedTexture"
+				{
+					"animatedTextureVar" "$basetexture"
+					"animatedTextureFrameNumVar" "$frame"
+					"animatedTextureFrameRate" "15"
+				}
+		}
+}
+

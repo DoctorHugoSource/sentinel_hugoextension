@@ -1,0 +1,21 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/turdis/circuit"
+	$bumpmap  "models/turdis/circuit_bump"
+//	$envmap "env_cubemap"
+	$envmaptint "[.015 .015 .015]"
+	$diffuseexp 1
+	$halflambert 1
+	$nocull 0
+
+	$phong 3
+	$phongalbedotint 1
+	$phongalbedoboost 0
+	$phongexponent 24
+	$phongboost 0.5
+	$phongfresnelranges "[0.3 0.3 0.3]"
+
+	$rimlight               0.5
+	$rimlightexponent       11
+	$rimlightboost          3
+}

@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/turdis/off/roundellit_off"
+	$bumpmap  "models/turdis/generic_bump"
+}

@@ -1,0 +1,29 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/turdis/flight/roundel_colored_flight"
+	$bumpmap  "models/turdis/generic_bump"
+	"$surfaceprop" "Plastic"
+	"$nodecal" "1"
+	"$selfillum" "2"
+	"$selfillummask" "models/turdis/roundel_colored_lit"
+
+	$phong 1
+	$phongexponent			20
+	$phongboost			1
+	$phongfresnelranges	"[1 1 1]"
+
+		"Proxies"
+		{
+			"Sine"
+				{
+					"sinemax" "5"
+					"sinemin" "1"
+					"sineperiod" "5"
+					"resultVar" "$selfillumtint"
+				}
+			"TARDIS_torrentturdis_Color"
+				{
+					"resultVar"	"$color2"
+				}
+		}
+}

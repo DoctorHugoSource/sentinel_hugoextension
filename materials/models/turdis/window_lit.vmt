@@ -1,0 +1,31 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\hugoextension\windows\sentinel\window_nocolor" 
+	$bumpmap  "models/turdis/window_bump"
+//	$envmap "env_cubemap"
+	$envmaptint "[.015 .015 .015]"
+	$diffuseexp 1
+	$halflambert 1
+	$nocull 0
+
+	$phong 3
+	$phongalbedotint 1
+	$phongalbedoboost 0
+	$phongexponent 24
+	$phongboost 0.5
+	$phongfresnelranges "[0.3 0.3 0.3]"
+
+	$rimlight               0.5
+	$rimlightexponent       11
+	$rimlightboost          3
+
+	"$selfillum" "2"
+	"$selfillummask" "models/turdis/window_lit"
+
+	Proxies {
+		TARDIS_torrentturdis_Color {
+			resultVar	$color2
+		}
+	}
+}
+

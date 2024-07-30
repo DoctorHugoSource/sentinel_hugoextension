@@ -1,0 +1,21 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/turdis/roundellit"
+	$bumpmap  "models/turdis/generic_bump"
+	"$surfaceprop" "Plastic"
+	"$nodecal" "1"
+	"$selfillum" "1"
+	"$selfillummask" "models/turdis/roundellit"
+
+	$phong 1
+	$phongexponent			20
+	$phongboost			1
+	$phongfresnelranges	"[1 1 1]"
+
+	Proxies {
+		TARDIS_torrentturdis_Color {
+			resultVar	$color2
+		}
+	}
+
+}

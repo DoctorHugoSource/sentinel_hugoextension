@@ -1,0 +1,14 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/turdis/warning/roundellit_warning"
+	$bumpmap  "models/turdis/generic_bump"
+	"$surfaceprop" "Plastic"
+	"$nodecal" "1"
+	"$selfillum" "1"
+	"$selfillummask" "models/turdis/warning/roundellit_warning"
+
+	$phong 1
+	$phongexponent			20
+	$phongboost			1
+	$phongfresnelranges	"[1 1 1]"
+}

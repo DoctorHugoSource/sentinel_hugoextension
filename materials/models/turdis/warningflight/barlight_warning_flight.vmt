@@ -1,0 +1,17 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/turdis/warningflight/barlight_warning_flight"
+	"$surfaceprop" "glass"
+	"$selfillum" 1
+     "$selfillummask" "models/turdis/warning/barlight_warning"
+	"$nodecal" "1"
+		"Proxies"
+		{
+			"AnimatedTexture"
+				{
+					"animatedTextureVar" "$basetexture"
+					"animatedTextureFrameNumVar" "$frame"
+					"animatedTextureFrameRate" "15"
+				}
+		}
+}

@@ -1,0 +1,13 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/turdis/barlight"
+	"$surfaceprop" "Plastic"
+	"$nodecal" "1"
+	"$selfillum" "2"
+	"$selfillummask" "models/turdis/barlight"
+
+	$phong 1
+	$phongexponent			20
+	$phongboost			1
+	$phongfresnelranges	"[1 1 1]"
+}

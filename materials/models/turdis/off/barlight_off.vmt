@@ -1,0 +1,12 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/turdis/off/barlight_off"
+	"$bumpmap" "models/turdis/light_bump"
+	"$surfaceprop" "Plastic"
+	"$nodecal" "1"
+
+	$phong 1
+	$phongexponent			20
+	$phongboost			1
+	$phongfresnelranges	"[1 1 1]"
+}

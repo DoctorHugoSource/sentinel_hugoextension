@@ -1,0 +1,17 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/turdis/off/telepathic_off"
+	$bumpmap  "models/turdis/telepathic_bump"
+//	$envmap "env_cubemap"
+	$envmaptint "[.015 .015 .015]"
+	$diffuseexp 1
+	$halflambert 1
+	$nocull 0
+	"$surfaceprop" "Plastic"
+	"$nodecal" "1"
+
+	$phong 1
+	$phongexponent			20
+	$phongboost			1
+	$phongfresnelranges	"[1 1 1]"
+}

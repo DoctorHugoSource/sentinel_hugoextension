@@ -1,0 +1,27 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/turdis/warningflight/roundellit_warning_flight"
+	$bumpmap  "models/turdis/generic_bump"
+	"$surfaceprop" "Plastic"
+	"$nodecal" "1"
+	"$selfillum" "2"
+	"$selfillummask" "models/turdis/warningflight/roundellit_warning_flight"
+//	"$selfillumtint" "[8 1.75 0.5]"
+	"$selfillumtint" "[5 5 5]"
+
+	$phong 1
+	$phongexponent			20
+	$phongboost			1
+	$phongfresnelranges	"[1 1 1]"
+
+	"Proxies"
+	{
+		"Sine"
+		{
+			"sinemax" "5"
+			"sinemin" "1"
+			"sineperiod" "5"
+			"resultVar" "$selfillumtint"
+		}
+	}
+}
